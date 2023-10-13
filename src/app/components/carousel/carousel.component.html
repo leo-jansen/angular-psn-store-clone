@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="gallery-wrapper">
+    <button class="arrow-left control" aria-label="Previous image" (click)="previousImg()">◀</button>
+    <button class="arrow-right control" aria-label="Next image" (click)="nextImg()">▶</button>
+    <div class="gallery">
+      <img [src]="item.pathImg" class="{{item.id == 0 ? 'item current-item':'item'}}" *ngFor="let item of items">
+    </div>
+  </div>
+</div>
